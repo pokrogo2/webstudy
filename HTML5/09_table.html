@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>테이블</title>
+    </head>
+    <body>
+        <!--테이블 구성
+            <table>태그 하위에
+            <tr> 하위에 <td>
+            -->
+        <table border="1">
+            <tr>
+                <td>1</td><td>2</td><td>3</td>
+            </tr>
+            <tr>
+                <td>4</td><td>5</td><td>6</td>
+            </tr>
+            <tr>
+                <td>7</td><td>8</td><td>9</td>
+            </tr>
+        
+        <!-- table > thead,tbody,tfoot>tr>td-->
+        </table>
+        <table border="1">
+        
+            <thead>
+                <tr>
+                    <td>번호</td>
+                    <td>제품명</td>
+                    <td>가격</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>냉장고</td>
+                    <td>2,000,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>세탁기</td>
+                    <td>500,000</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        <!--셀병합
+            td태그의 속성으로 처리
+            가로 병합 :colspan 열병합
+            세로 병합 :rowspan 행병합
+            -->
+        <h3>좌우 셀병합</h3>
+        <table border="1">
+        
+            <tbody>
+                <tr>
+                    <td>자두</td>
+                    <td>짱구</td>
+                    <td>스폰지밥</td>
+                </tr>
+                <tr>
+                    <td colspan="3">열병합</td>
+                </tr>
+            </tbody>
+        
+        
+        </table>
+        
+        <h3>상하 셀병합</h3>
+        <table border="1">
+        
+            <tbody>
+                <tr>
+                    <td>브레드</td>
+                    <td rowspan="3">윌크</td>
+                </tr>
+                <tr>
+                    <td>소세지</td>
+                </tr>
+                <tr><td>치즈</td></tr>
+            </tbody>
+                
+        
+        
+        </table>
+    </body>
+</html>
