@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>입력</title>
+    </head>
+    <body>
+        <!--서버로 데이터보내기 : form태그-->
+        <!--폼태그 내부 하위 요소들 input button select textarea 의 값을 서버로보냄-->
+        <!--폼태그 하위 요소는 name value 속성이 서버측에서 변수명과 변수에 저장된 값의 역할을 함-->
+        <!--intput name="age" value="20"  서버측 string age="20"-->
+        <!--서버측으로 보내느 모든값은 string-->
+        <!--form태그 속성-->
+        <!--action : 서버로 정보를 보내는것을 submit-->
+        
+        <!--method : 서버로 데이터 보내는것-->
+        <!--get : 기본값 method ="get"-->
+            <!--데이터를 헤더에 포함
+                노출,보안취약,빠름
+            post : 데이터가 body에포함.
+                    노출 x 보안 우수 로그인회원가입사용
+
+            enctype : 인코딩 방식
+                파일을 보내는 경우사용, 폼태그내에 파일첨부가 포함된 경우
+                enctype="multipart/form-data"로 작성하고 method="post"로
+    
+-->
+        <!--입력 태그 : input-->
+        
+        <!--사용자로부터 데이터를 입력받는 태그-->
+        <!--사용자가 입력한 데이터가 value 속성이 된다.-->
+        <!--입력의 형식에 따라 타입이 다름.-->
+        <!--type="text" 일반데이터-->
+        <!--type="password" 비밀번호를받음-->
+        <!--type="button" 역할없는 일반버튼-->
+        <!--submit : 서밋하는 버튼 reset :초기화버튼 radio 둘중하나
+            checkbox 여러개 hidden 서버에 데이터전송용도
+            select : 선택 
+            textarea 다중행 입력
+        -->
+        
+        <h3>각종 입력 태그</h3>
+        <form>
+            <input type="text" placeholder="일반 텍스트"><br>
+            <input type="password" placeholder="비밀번호"><br>
+            <input type="number" placeholder="숫자만"><br>
+            <input type="email" placeholder="이메일만"><br>
+            <input type="url" placeholder="주소만"><br>
+            <input type="date" placeholder="날짜"><br>
+            <input type="time" placeholder="시간"><br>
+            
+        </form >
+        
+        <hr>
+        <form action="//search.daum.net/search" >
+            <input type="text" name="query" >
+            <input type="button" value="버튼에적힌 텍스트">
+            <input type="submit" value="서버로 데이터전송">
+            <input type="reset" value="초기화">
+            <button>submit</button>
+        </form>
+        
+        <hr>
+        <h3>선택</h3>
+        <fieldset>
+            <legend>하나만선택하는 radio</legend>
+            <!--하나만 선택하려면 네임이 같아야함-->
+            <input type="radio" name="1" id="g1" value="v1"><label for="g1">선택안함</label>
+            <input type="radio" name="1" id="g2" value="v2"><label for="g2">여</label> 
+            <input type="radio" name="1" id="g3" value="v3"><label for="g3">남</label>
+        </fieldset>
+        <dd>
+            <select name ="character" multiple>
+                <option value="jjanggu">짱구</option>
+                <option value="jadu">자두</option>
+            </select>
+        </dd>
+        <dd>
+            <input type="text" list ="domain" placeholder="select/input" name="domain">
+            <datalist id="domain">
+                <option value="naver.com"/>
+                <option value="kakao.com"/>
+                <option value="gmail.com"/>
+                
+            </datalist>
+            
+        </dd>
+        
+        <h3>다중행</h3>
+        
+        <!--textarea 태그 중 rows="10" cols="30"-->
+        <br>
+        <textarea rows="10" cols="30" name="asdf" placeholder="asdf"></textarea>
+        
+        <h3>file </h3>
+        <form method="post" enctype="multipart/form-data">
+            <input type ="file" name="filename">
+            <button>submit</button>
+        </form>
+    </body>
+    
+</html>
