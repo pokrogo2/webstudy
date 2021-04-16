@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>css</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            input[name="tel"]{color: aqua}
+            input[name="query"]:focus{background-color: aqua}
+            input[type="radio"]:checked+label{color: red ;}
+            
+            intput[type="radio"]:hover,input[type="radio"]:hover+label{cursor:pointer;}
+            button:hover:nth-of-type(2){background-color: black ; color :aliceblue;}
+        </style>
+    
+    </head>
+
+    <body>
+    
+        검색 <input type="text" name="query"> &nbsp;<button><i class="fas fa-search fa"></i></button>
+        
+        <form >
+            <fieldset>
+            <legend> 성별을 선택하세요 </legend>
+            <input type="radio" id="남" name="성별">
+            <label for="남">남성</label>
+            <input type="radio" id="여" name="성별">
+            <label for="여">여성</label>
+            </fieldset>
+        </form>
+           <form >
+            <fieldset>
+            <legend> 취미를 선택하세요 </legend>
+            <input type="checkbox" id="영화" name="취미">
+            <label id="영화">영화</label>
+            <input type="checkbox" id="여행" name="취미">
+            <label id="여행">여행</label>
+            <input type="checkbox" id="게임" name="취미">
+            <label id="게임">게임</label>
+            </fieldset>
+        </form>
+        <br>
+        
+        연락처를 확인하세요 <input type="text" name="tel" value="010-1234-5678" disabled>
+        <br>
+        <button>확인하세요</button>
+    
+    </body>
+</html>

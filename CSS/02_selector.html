@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>selector</title>
+        <style>
+        
+            /* 1. 전체선택자*/
+            *{
+                color: aqua;
+            }
+            h1{
+               color: blue 
+            }
+            /*그룹*/
+            h1,h2,h3,h4,h5{
+                color :bisque
+            }
+            .red-style{
+                color: red
+            }
+            .mark-style{
+                background: silver;
+            }
+            /*아이디 선택자 #*/
+            #big-title{
+                color: black
+                
+            }
+            #red{
+                color: red
+            }
+            #blue{
+                color: blue
+            }
+        </style>
+    
+    </head>
+
+    <body>
+    
+    
+        <h1 id ="big-title">안녕하세요</h1>
+        <h2>안녕하세요</h2>
+        <h3>안녕하세요</h3>
+        <h4>안녕하세요</h4>
+        <h5>안녕하세요</h5>
+        <p class="red-style mark-style">HELLO WORLD</p>
+        <p class ="red-style">HELLO WORLD</p>
+        <p>HELLO WORLD</p>
+        
+        <p><span id="red">아야어요</span>우유으이</p>
+        <p>아야어요 <span id="blue">우유으이</span></p>
+    </body>
+</html>
