@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        
+            .answer{
+                visibility: hidden;
+            }
+            
+            #outer:hover>.answer{
+                visibility: visible;
+            }
+            #view-answer:hover .answer{
+                visibility: visible;
+                font-weight: 900;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+        <h3>다음중 블록레벨이 아닌 태그는?</h3>
+        <p>1.div</p>
+        <p>2.a</p>
+        <p>3.p</p>
+        <p>4.ul</p>
+        
+        <span id="outer">정답 :[<span class="answer">2</span>]</span><br><br>
+        <span id="view-answer">정답보기 <span class="answer">2</span></span>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        /*
+            내부여백 :padding ,border 안쪽
+            외부여백 : margin,border 
+            그림자 : box-shadow
+            
+            */
+            #box1{
+                width: 300px;
+                height: 50px;
+            }
+            #box2{
+                /*width: 640px;
+                height: 390px;
+                background-image: url(./images/cat.jpg);
+                background-size: 640px 390px;
+                width: 300px;
+                height: 300px;
+                background-image: url(./images/cat.jpg);
+                background-size: 300px 300px;
+                background-size:cover;*/
+                width: 1000px;
+                height: 500px;
+                background-image: url(./images/cat.jpg);
+                background-repeat: no-repeat;
+                background-position: center; /*세로 (탑,미들,바텀)가로(레프트 센터 라이트)*/
+                
+            }
+            #box3{
+                width: 100px;
+                height: 100px;
+                /*border: 1px solid black;
+                border-top: 1px solid black;
+                border-right: 2px dashed black;
+                border-bottom: 3px dotted black;
+                border-left: 4px double black;*/
+                border: 1px solid black;
+                border-radius: 100px;
+                border-radius: 10px 5px;/*11 1~7 5 시 방향*/
+                border-radius: 10px 100px 100px;
+                border-radius: 5px 10px 15px 20px;
+            }
+            #box4{
+                border: 1px solid black;
+                padding: 10px;
+                padding: 10px 20px; /*상하 // 좌우*/
+                padding : 10px 20px 30px 40px;/*상우하좌 시계방향*/
+                
+            }
+            #box5{
+                width:60px;
+                height: 60px;
+                padding: 10px;
+                border: 10px solid gray;
+                box-sizing: content-box;/* width height가 콘텐츠의 크기(기본값)*/
+            }
+            #box6{
+                width:100px;
+                height: 100px;
+                padding: 10px;
+                border: 10px solid silver;
+                box-sizing: border-box;
+            }
+             #box7{
+                /*margin : border 바깥쪽 여백*/
+                 width: 100px;
+                 height: 100px;
+                 border: 1px solid black;
+                 margin-top: 10px;
+                 margin-right: 10px;
+                 margin-top: 10px;
+                 margin-bottom: 10px;
+                 margin: 10px;/*전체*/
+                 margin: 10px 20px;/*상하 좌우*/
+                 margin: 10px 5px 10px;/*상 좌우 하*/
+                 margin: 10px 20px 30px 40px;/*상 우 하 좌*/
+                 margin:0 auto;/*상하 0 좌우 동일여백*/
+            }
+            #box8{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                box-shadow: 5px 5px gray;
+                box-shadow: -5px -5px 10px gray;/*가로 세로 블러 색*/
+            }
+        </style>
+    </head>
+    <body>
+    
+        <!--div태그 : 블록레벨,영역생성
+        1.너비 높이-->
+        <div id="box1">
+            너비 높이 빡스
+        
+        </div>
+        <!--배경-->
+        <div id="box2"></div>
+        <!--테두리-->
+        <div id="box3"></div>
+        
+        <div id="box4">내부여백확인</div>
+        <!--box-sizing : 박스 크기지정방법-->
+        <div id="box5"></div>
+        <div id="box6"></div>
+        <div id="box7"></div>
+        <div id="box8"></div>
+    </body>
+</html>
