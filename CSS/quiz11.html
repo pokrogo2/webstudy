@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            html { 
+                background: url(./images/bg_login_white_200910.png) no-repeat center center   fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            #container{
+                position: relative;
+                width: 390px;
+                height: 406px;
+                margin-top: 120px;
+                margin: 0 auto;
+            }
+            .screen_out{
+                position: absolute;
+                width: 0;
+                height: 0; /*내용텍스트는 모두 영역을 벗어남*/
+                overflow: hidden;
+            }
+            .login_tistory{
+                left: 50%;
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 120px;
+            }
+            .login_tistory>.title{
+                width: 100%;
+                height: 32px;
+                background-position: 0 -100px;
+                font-size: 40px;
+                text-align: center;
+                
+                
+            }
+            fieldset{
+                border: none;
+            }
+            
+
+            
+            .box_login{
+                width: 370px;
+                 border: 1px solid #dddddd;
+                 border-radius: 3px;
+            }
+            .inp_text{
+                width: 330px;
+                height: 16px;
+                margin: 0;
+                padding: 18px 19px 19px;
+                border: 1px solid #dddddd;
+              
+            }
+            .inp_text:nth-of-type(1){
+                border-radius: 3px 3px 0 0;
+            }
+            .inp_text:nth-of-type(2){
+                border-right: 3px 3px 0 0;
+            }
+            #loginId{
+                width: 330px;
+                height: 19px; 
+                border: 0;
+                outline: 0;
+               
+            }
+            button{
+                margin-top: 20px;
+                width: 100%;
+                height: 48px;
+                border-radius: 3px;
+                font-size: 16px;
+                color: #fff;
+                margin-left: 0px;
+                background-color: #b9b9b9;
+                border: 0;
+                cursor: pointer;
+                outline: none;
+                
+                
+            }
+            .login_append{
+                overflow: hidden;
+                padding: 10px 0 0;
+            }
+            .inp_chk{
+                float: left;
+            }
+            .txt_find{
+                float: right;
+            }
+            #keepLogin{
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h2 class="screen_out">로그인</h2>
+            <div class=login_tistory>
+            <strong class="title">TISTORY</strong>
+            <form method="post" action="https://www.tistory.com/auth/login">
+                <fieldset>
+                    <legend class="screen_out">로그인 정보 입력 폼</legend>
+                    <!--id,pw-->
+                    <div class="box_login">
+                        <div class="inp_text">
+                            <label for="loginId" class="screen_out">로그인</label>
+                            <input type="email" id="loginId" placeholder="ID">
+
+                        </div>
+                          <div class="inp_text">
+                            <label for="loginPw" class="screen_out">비밀번호</label>
+                            <input type="password" id="loginId" placeholder="Password">
+                                </div>
+                        </div>
+                        
+                    
+                    <button>로그인</button>
+                    <!--로그인 상태유지,아이디비번찾기-->
+                    <div class="login_append">
+                        <!--로그인 상태유지-->
+                        <div class="inp_chk">
+                            <input type="checkbox" id="keepLogin">
+                            <label for="keepLogin">로그인 상태유지</label>
+                            
+                        </div>
+                        <!--아이디비밀번호 찾기-->
+                        <span class="txt_find"><a>아이디</a>/<a>비밀번호 찾기</a></span>
+                    </div>
+                </fieldset>
+            
+            
+            </form>
+        </div>
+    
+    
+    </body>
+
+</html>
