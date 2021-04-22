@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title></title>
+        <style>
+            html,body,aside,div{
+                padding: 0;
+                margin: 0;
+            }
+            aside,div{
+                box-sizing: border-box;
+            }
+            aside{
+                width: 300px;
+                border: 1px solid black;
+                
+            }
+            input[type="radio"]{
+                display: none;
+            }
+            .content-list{
+                display: none;
+            }
+            #front:checked ~ div:nth-of-type(2){
+                display: block;
+            }
+            #back:checked ~ div:nth-of-type(3){
+                display: block;
+            }
+            #front:checked ~ div:nth-of-type(1)>label:nth-of-type(1){
+                font-weight: 900;
+            }
+            #back:checked ~ div:nth-of-type(1)>label:nth-of-type(2){
+                font-weight: 900;
+            }
+            .tab-menu{
+                display: flex;
+            }
+            .tab-menu>label{
+                display: flex;
+                width: 150px;
+                padding: 20px 0;
+                text-align: center;
+                background-color: pink;
+            }
+            .content-list>ul{
+                list-style-type: none;
+                padding: 0px;
+                
+            }
+            .thumbnail{
+                width: 100px;
+                height: 60px;
+                background-repeat: no-repeat;
+                background-size: 100px 60px;
+            }
+            .content-list .content{
+                border-top: 1px solid black;
+                padding: 5px 10px;
+            }
+            #thumb1{background-image: url(./images/cat.jpg);}
+            #thumb2{background-image: url(./images/dog.jpg);}
+            #thumb3{background-image: url(./images/eagle.jpg);}
+            #thumb4{background-image: url(./images/frog.jpg);}
+            #thumb5{background-image: url(./images/hedgehog.jpg);}
+            #thumb6{background-image: url(./images/hooray.jpg);}
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <aside>
+            <!--상단 탭-->
+            <input type="radio" name="tab" id="front" checked>
+            <input type="radio" name="tab" id="back">
+            <div class="tab-menu">
+                <label for="front">프론트엔드</label>
+                <label for="back">백엔드</label>
+            </div>
+        <!--프론트엔드 클릭하면 나타날 화면-->
+            <div class="content-list">
+                <ul>
+                    <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb1"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>HTML</h3>
+                        <p>Hyptext Markup Language;</p>
+                    </div>
+                        </li>
+                     <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb2"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>css</h3>
+                        <p>css</p>
+                    </div>
+                        </li>
+                     <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb3"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>javascript</h3>
+                        <p>script</p>
+                    </div>
+                        </li>
+                </ul>
+            </div>
+        <!--백엔드 클릭시 나타날 화면-->
+            <div class="content-list">
+                <ul>
+                    <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb4"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>java</h3>
+                        <p>java</p>
+                    </div>
+                        </li>
+                     <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb5"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>jsp</h3>
+                        <p>java server page</p>
+                    </div>
+                        </li>
+                     <li class="content">
+                        <!--작은이미지-->
+                    <div class="thumbnail" id="thumb6"></div>
+                    <!--내용-->
+                    <div class="description">
+                        <h3>spring</h3>
+                        <p>spring framework</p>
+                    </div>
+                        </li>
+                </ul>
+            </div>
+        </aside>
+    </body>
+
+</html>

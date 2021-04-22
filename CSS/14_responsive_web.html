@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="veiwport" content="width=device-width,initial-scale=1.0">
+        <style>
+            /*반응형 웹
+            웹문서를 열어보는 기긱에 따라 페이지구성이 즉각변경되는것
+            기기에따라 화면 크기가 다르게표시
+            뷰포트
+                기기에 표시되는 화면크기
+                반응형 웹을 제작하기 위해 뷰포트설정필요
+                meta태그  meta name="viewport"
+            미디어쿼리
+                화면의 크기변화를 감지하는 css모듈
+                선언 : @media
+                종류 : all,print,speech,screen
+                조건 : 거의 너비(width) 
+                    width640px ; 640px일때적용
+                    min-width:640px 최소640이상;
+                    max-width:640px; 최대640px이하 
+                    orientation:ladscape(가로가 넓은 화면)
+                    portrait가로가 좁은화면
+            ex)@media 종류 and (너비조건 : nnn px){
+            적용할곳{ background-color:색;}
+            }
+            
+            */
+            
+            html,body{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                background-color: lightyellow;
+            }
+            @media screen and (min-width:640px){
+                body{ background-color:pink;}
+                /*너비가 640px이상이면 핑크,보다작으면 lightyellow*/
+                /**/
+            }
+            #box1{
+                width:200px;
+                height: 200px;
+                background-color: black;
+            }
+            @media screen and (orientation:landscape){
+                /*가로가 세로보다 클때*/
+                #box1{
+                    background-color: chartreuse;
+                }
+                
+            }
+            @media screen and (orientation:portrait){
+                #box1{
+                    background-color: cyan;
+                }}
+            #box2{
+                width: 200px;
+                height: 200px;
+                color: cornflowerblue;
+                
+            }
+            @media screen and (max-width:640px){
+                #box2{
+                    background-color: red;
+                }
+            }
+            @media screen and (min-width:641px) and (max-width:1080px){
+                #box2{
+                    background-color: green;
+                }
+            }
+            @media screen and (min-width:1081px){
+                #box2{
+                    background-color: blue;
+                }
+            }
+            
+            /*연습*/
+            /*box2색상바꾸기*/
+            /*0~640px :red
+             641~1080green
+             1081~ blue* /
+        </style>
+    </head>
+
+    <body>
+        <!--<div id="box1"></div>-->
+        <div id ="box2"></div>
+    </body>
+
+</html>

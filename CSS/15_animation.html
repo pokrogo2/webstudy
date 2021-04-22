@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title></title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                background-color: antiquewhite;
+            }
+        /*애니메이션 
+            1. transform :형태바꾸기
+                1)scale:크기
+                2)rotate:회전
+                3)skew:기울이기
+                4)translate:이동
+            2.keyframes모듈
+            3.transition : 스타일 속성 변경하기*/
+            @keyframes my_ani{
+                from{background-color: orange;}
+                to{background-color: red;}
+            }
+            #box1{
+
+                background-color: pink;
+                /*box1에  my_ani적용*/
+                animation: my_ani;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-delay: 500ms; /*딜레이:0.5*/
+            }
+            @keyframes your_ani{
+                25%{
+                    background-color: green;
+                }
+                50%{
+                    background-color: yellowgreen;
+                }
+                75%{
+                    background-color: limegreen;
+                    
+                }
+                100%{
+                    background-color: teal;
+                }
+            }
+            #box2{
+
+                background-color: yellow;
+                animation-name: your_ani;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            #rotate-box{
+                -webkit-transform: rotate(10deg); /*시계방향 10도*/
+                -moz-transform: rotate(10deg);/*크롬,파폭,오페라 순*/
+                -o-transform: rotate(10deg);
+                transform: rotate(10deg);
+                
+            }
+            #scale-box{
+                transform: scale(2,0.5);/*가로 두배 세로 0.5배*/
+            }
+            #skew-box{
+                transform: skewX(10deg)
+            }
+            #translate-box{
+                transform: translate(100px,100px);
+            }
+            #transition-box{
+                margin-top: 200px;
+                transition-delay: 1s;
+                transition-timing-function: ease;
+                transition-duration: 5s;
+                transition-property: width;
+                
+            }
+            #transition-box:hover{
+                width: 1000px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="rotate-box"></div>
+        <div id="scale-box"></div>
+        <div id="skew-box"></div>
+        <div id="translate-box"></div>
+        <div id="transition-box"></div>
+    </body>
+
+</html>
