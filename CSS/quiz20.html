@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>화면구현_평가대비연습4</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        header>h1{
+            text-align: center;
+        }
+        header>nav>ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+           width:120px;
+            list-style-type: none;
+            padding-left: 36px;
+            padding-bottom: 30px;
+        }
+        a{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        li:hover{
+            color: orangered;
+            font-weight: 700;
+            border-bottom: 2px solid orangered;
+            
+        }
+        a:hover{
+            color: orangered;
+        }
+        section{
+            position: relative;
+            width:480px;
+            height: 450px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            float: left;
+        }
+        article{
+            
+            width: 45%;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            
+        }
+        
+    
+
+        section>h3{
+            width: 100%;
+        }
+        aside{
+            float: right;
+            border: 1px solid black;
+            width: 180px;
+            height: 500px;
+        }
+        
+        footer{
+            position: absolute;
+            bottom: 0;
+            background-color: lightgray;
+            
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            
+            
+        }
+        footer>p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>header</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h3>section</h3>
+            <article>
+                <h3>article1</h3>
+                article 내용1
+            </article>
+            <article>
+                <h3>article2</h3>
+                article 내용2
+            </article>
+            <article>
+                <h3>article3</h3>
+                article 내용3
+            </article>
+            <article>
+                <h3>article4</h3>
+                article 내용4
+            </article>
+            <article>
+                <h3>article5</h3>
+                article 내용5
+            </article>
+            <article>
+                <h3>article6</h3>
+                article 내용6
+            </article>
+        </section>
+        <aside>
+            <h3>aside</h3>
+            aside 내용
+        </aside>
+        <footer>
+            <p>제작 정보, 회사 정보, 저작권</p>
+        </footer>
+    </div>
+</body>
+</html>
