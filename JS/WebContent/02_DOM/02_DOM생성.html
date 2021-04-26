@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*요소생성 document.createElement(요소) 
+	   요소삽입 : 부모요소.appendChild(요소);
+	   요소삭제 :부모요소.removeChild(요소);
+	   요소변경: 부모요소.replaceChild(요소);
+	
+		요소 선택방법(추가)
+		head태그 :  document.head
+		body 태그  : document.body
+		parentNode : 선택한 요소의 부모요소
+		childNodes : 선택한 요소의 모든 자식요소들
+		firstChild/lastChild : 첫/마지막자식요소
+	*/
+
+</script>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		//1.요소만들기
+		 var title = document.createElement('h1');//<h1></h1>생성
+		 
+		 //요소에 텍스트삽입
+		 title.textContent = '안녕하세요'; // <h1>안녕하세요</h1>
+		 
+		 //삽입
+		 document.getElementById('container').appendChild(title);//부모요소를찾고 그안에 h1삽입
+		 
+	
+		 var p  =document.createElement('p');
+		 var content = document.createTextNode('반갑습니다.js입니다.');
+		 p.appendChild(content); // <p>반갑습니다.js입니다.</p>
+		 document.body.appendChild(p);
+		 
+		 var deleteElement = document.getElementById('container');
+		 deleteElement.parentNode.removeChild(deleteElement);
+	</script>
+
+</body>
+</html>

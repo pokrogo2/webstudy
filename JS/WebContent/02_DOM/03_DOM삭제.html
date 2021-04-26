@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id='title' class='hello'>안녕하세요</h1>
+	<div id='container' class="wrap">
+		<div id="box1" class="box">박스1</div>
+		<div id="box2" class="box">박스2</div>
+		<div id="box3" class="box">박스3</div>
+	
+	</div>
+	<script>
+		document.getElementById('title');
+
+		console.log(document.getElementsByTagName('h1')[0]);
+		console.log(document.getElementsByClassName('hello')[0]);
+		console.log(document.querySelector('#title'));
+		console.log(document.querySelectorAll('h1')[0]);
+		console.log(document.querySelectorAll('.hello')[0]);
+		
+		//1.요소 알아내기
+		var deleteElement = document.getElementById('title');
+		document.body.removeChild(deleteElement);
+		//deleteElement.parentNode.removeChild(deleteElement);
+		var deleteElementc = document.getElementById('box1');
+		var deleteElementp = document.getElementById('container');
+		deleteElementp.removeChild(deleteElementc);
+		
+		var deleteElementClass = document.getElementsByClassName('box')[1];
+		deleteElementp.removeChild(deleteElementClass);
+	</script>
+</body>
+</html>

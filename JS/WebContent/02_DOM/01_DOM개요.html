@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 
+		DOM
+		1.Document object model 문서 객체모델
+		2.HTML문서의 구성요소를 획득,추가,삭제,변경 등의 작업을 수행한다.
+		3.HTML문서의 구성요소 알아내기
+			1)document.getElementById('아이디')
+			2)document.getElementsClassName('클래스')
+			3)document.getElementsByTagName('태그')
+			4)document.querySelect('선택자(selector)')
+			5)document.querySelectorAll('선택자(selector)')
+				
+			attribute:속성
+				set,getAttribute
+	
+	*/
+	 //null.textContent = '네이버로 이동';순서대로 가기때메 22번줄에서 못찾기때문.
+</script>
+</head>
+<body>
+	<a id="naver-link"></a>
+	<br>
+	<img id="img">
+	<script>
+	var a =document.getElementById('naver-link');
+	//a에는 < a id = 'naver-link'>가 저장
+	a.textContent = '네이버로 이동 ';
+	//a.innerHTML='<strong>네이버로이동</strong>';
+	//a.style.color='red';
+	//alert(a.getAttribute('id'));
+	var img = document.getElementById('img');
+	a.setAttribute('href','https://www.naver.com');
+	img.setAttribute('src','data:image/jpeg;base64');
+	</script>
+	</body>
+</html>

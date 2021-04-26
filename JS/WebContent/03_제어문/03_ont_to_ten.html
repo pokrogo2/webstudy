@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id ="one-to-ten"></div>
+		<script>
+			var n =1;
+			var result='';
+			while(n<=10){
+				result += n+'<br>';
+			
+				n++;
+			}
+			document.getElementById('one-to-ten').innerHTML = result;
+		</script>
+		
+		<div id="list1">
+		<script>
+			var ul = document.createElement('ul');
+			document.getElementById('list1').appendChild(ul);
+			var n=1;
+			while(n<=5){
+				var li = document.createElement('li');
+				li.textContent=n;
+				ul.appendChild(li);
+				n++;
+			}
+		</script>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				
+				
+			</ul>
+			
+			<div id="select1"">
+				<select name="mm">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</select>
+			
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		
+		
+		
+</body>
+</html>
