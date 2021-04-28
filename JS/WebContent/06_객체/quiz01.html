@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id ="practice1"></div>
+
+<script>
+	var people =[
+		{
+			'name' : '브레드',
+			'age' : 10
+			
+		},
+		{
+			'name' : '윌크',
+			'age' : 10
+		},{
+			'name' : '초코',
+			'age' : 4
+		}
+		
+	];
+	
+	var table = document.createElement('table');
+	var tbody = document.createElement('tbody');
+	document.getElementById('practice1').appendChild(table);
+	table.appendChild(tbody);
+	var tr = document.createElement('tr');
+	tbody.appendChild(tr);
+	var titles = ['이름','나이'];
+	for(let i =0; i<titles.length;i++){
+		
+		var th=document.createElement('th');
+		th.textContent = titles[i];
+		tr.appendChild(th);
+	}
+	for(let i=0; i<people.length;i++){
+		
+		tbody.appendChild(tr);
+		for(let p in people[i]){
+			var td =document.createElement('td');
+			td.textContent =people[i][p];
+			tr.appendChild(td);
+		}
+	}
+	
+
+</script>
+</body>
+</html>

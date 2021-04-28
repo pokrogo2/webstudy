@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	//프로퍼티가 없는객체생성
+	var person={};
+	//프로퍼티추가
+	//1.동적추가가 지우원
+	//2.새로운 프로퍼티발견되면 알아서 추가
+	person.name='브레드'; //하면 name을만듬
+	person.age=10;
+	person.birthday='2020-03-03';
+	//수정
+	person.birthday='2011-03-03'
+	//삭제
+	delete person.birthday;
+	person_info(person);
+	function person_info(p){
+		console.log('이름 : ' + p.name);
+		console.log('나이 : ' + p.age);
+		console.log('생일 : ' + p.birthday);
+	}
+
+	//5.프로퍼티 순회(반복문으로 프로퍼티 불러다 사용)
+	//for in 사용
+	//형식
+	//	for(let 프로퍼티 in 객체){
+	//		객체.프로퍼티 >사용불가
+	//		객체[프로퍼티] 가능
+	//}
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

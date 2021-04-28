@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		border:1px solid black;
+	}
+	table,td{
+		border-collapse :collapse;;
+		
+	}
+	td{
+	padding :5px 3px;}
+	.even{
+		background-color:fuchsia;
+	}
+	div{
+		margin-top : 20px;
+	}
+</style>
+</head>
+<body>
+	
+	<div id="practice1"></div>
+
+	<script>
+	
+	let dan = Number(prompt('n단'));
+	let table = document.createElement('table');
+	if(dan %2 ==0){
+		table.setAttribute('class','even');
+	}
+	let tbody = document.createElement('tbody');
+	table.appendChild(tbody);
+	for(let n=1;n<=9; n++){
+		let tr = document.createElement('tr');
+		let td1 = document.createElement('td');
+		td1.textContent = dan;
+		tr.appendChild(td1)
+		let td2 = document.createElement('td');
+		td2.textContent = 'x';
+		tr.appendChild(td2)
+		let td3 = document.createElement('td');
+		td3.textContent = n;
+		tr.appendChild(td3)
+		let td4 = document.createElement('td');
+		td4.textContent = '=';
+		tr.appendChild(td4)
+		let td5 = document.createElement('td');
+		td5.textContent = dan*n;
+		tr.appendChild(td5)
+		
+		tbody.appendChild(tr);
+	}
+	document.getElementById('practice1').appendChild(table);
+
+	</script>
+	
+	
+	
+	<br>
+	<br>
+	<div id ="pracice2"></div>	
+	<script type="text/javascript">
+		//전체 구구단
+		
+		let table1 = document.createElement('table');
+		let tbody1 = document.createElement('tbody');
+		table.append(tbody1);
+		for(let i=1;i<=9;i++){
+				let tr1 = document.createElement('tr');
+			for(let j=1;j<=9;j++){
+				let td1 = document.createElement('td');
+				td1.textContent=j + ' x ' + i +' = ' + j*i;
+				tr1.appendChild(td1);
+				tbody1.appendChild(tr1);
+			}
+		}
+	
+	document.getElementById('practice2').appendChild(table1);
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 자기함수호출
+		1.함수정의만 하면 그때 곧바로 실행되는함수
+		2.여러코드묶어서 실행하려할대 사용.
+		3.작성방법
+			a=function(){};
+			a();
+			----------------
+			(function(){})()
+	
+	
+	*/
+
+	(function(name,age){
+		console.log('이름 : ' + name + ',나이 : ' + age + '살');
+		
+	})('브레드',10);//a(name,age); (a=function(){})
+	((name,age) =>{
+		console.log('이름 : ' + name + ',나이 : ' + age + '살');
+	})('브레드',10);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>라면</li>
+		<li>우동</li>
+		<li>김밥</li>
+		<li>순대</li>
+		<li>튀김</li>
+	
+	
+	</ul>
+	<script>
+		var del_name = prompt('메뉴를 입력하세요');
+		var liList = document.getElementsByTagName('li')//getelementby tagname은 집합을가져오는것
+		for(let i =0; i<liList.length;i++){
+			if(liList[i].textContent == del_name){
+				document.getElementsByTagName('ul')[0].removeChild(liList[i]);
+				break;
+			} 
+			//.textContent까지해야 내부 내용가져올수있음
+		}
+	
+	</script>
+</body>
+</html>

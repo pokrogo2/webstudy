@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 익명함수
+		1.함수이름이없음
+		2.어떤변수에 저장한 뒤에 호출
+		3.함수 정의가 반드시 함수호출보다 코드상 먼저 나타나야한다.
+		(호이스팅 x)
+		4.함수정의
+			function(매개변수){
+				함수본문
+				return 값;
+				}
+			화살표함수 (arrow)
+				(매개변수) =>{
+					함수본문
+					return 값;
+				}
+		
+		*/
+		var f =function(){
+			console.log('Hello Function');
+		}
+		var whoAmI = function(name,age){
+			console.log('이름 : ' + name + ',나이 : ' +age +'살');
+		}
+		whoAmI('브레드',10);
+		var whoAreYou = (name,age)=>{
+			console.log('이름 : ' + name + ',나이 : ' +age +'살');
+		}
+		whoAreYou('초코',5);
+</script>
+</head>
+<body>
+
+</body>
+</html>

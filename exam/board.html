@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            .container{
+                width: 675px;
+                height: 376px;
+                margin: 0 auto;
+                 background-color:aliceblue;
+            }
+            header{
+                text-align: center;
+            }
+            .tb{
+                
+                width: 100%;
+                
+                margin: 0 auto;
+            }
+            table{
+                width: 95%;
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+            #tt{
+                background-color: gainsboro;
+                border-top: 2px solid gray;
+                
+            }
+            #tl{
+                border-bottom: 2px solid gray;
+            }
+            tr{
+                border-bottom: 1px solid gray;
+                height: 30px;
+            }
+            tr:hover{
+                background-color: beige;
+            }
+            .btn{
+                
+                margin: 0 auto;
+                margin-top: 30px;
+                text-align: center;
+                padding-left: 190px;
+            }
+            .btn_box{
+                box-sizing: border-box;
+                width: 120px;
+                height: 40px;
+                
+                
+                background-color: blue;
+                border: 1px solid blue;
+
+                float: left;
+                margin-left: 20px;
+                border-radius: 4px;
+                padding: 10px
+            }
+            a{
+                
+                color: white;
+                text-decoration: none;
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+        
+            <header><h2>자유게시판</h2></header>
+            <div class="tb">
+                <table>
+                    <tbody>
+                        <tr id="tt">
+                            <td>순번</td>
+                            <td>제목</td>
+                            <td>작성자</td>
+                            <td>작성일</td>
+                            <td>조회수</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>이용후기</td>
+                            <td>존윅</td>
+                            <td>2021-04-22</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>게시판이용문의</td>
+                            <td>제임스</td>
+                            <td>2021-04-22</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>가입인사</td>
+                            <td>새내기</td>
+                            <td>2021-04-21</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>[필독]게시판이용안내</td>
+                            <td>매니저</td>
+                            <td>2021-04-21</td>
+                            <td>94</td>
+                        </tr>
+                         <tr id="tl">
+                            <td>1</td>
+                            <td>[긴급]공지사항</td>
+                            <td>관리자</td>
+                            <td>2021-04-20</td>
+                            <td>85</td>
+                        </tr>
+                    
+                    </tbody>
+                
+                </table>
+            
+            </div>
+            
+            <div class="btn">
+                <div class="btn_box">
+                <a href="login.html">로그아웃</a>
+                    </div>
+                <div class="btn_box">
+                <a href="personal_info.html">개인정보수정</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

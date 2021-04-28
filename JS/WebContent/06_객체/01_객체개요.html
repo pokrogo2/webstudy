@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+	
+	
+	/* 여러변수를 하나로 모은 데이터
+		객체를 구성하는 요소를 속성이라함
+		객체생성
+			var 객체 = {속성 : 값,속성=값}
+		객체속성(프로퍼티,property) 사용법
+		마침표 표기법 : 객체.속성
+		대괄호 표기법 : 객체['속성']
+	
+	*/
+	
+/* 		var person={
+			'name':'브레드',
+			'age':20
+		};
+	console.log(person.name);
+	console.log(person.age);
+	console.log(person['name']);
+	console.log(person['age']) */;
+	
+	//객체의 프로퍼티는 변수 배열 함수 객체등 모든 데이터 저장가능
+	
+	var person ={
+		name:'브레드',
+		age:10,
+		birthday:'2011-03-03',
+		friend:{
+				name:'초코',
+				age:5
+		},
+		bag :['우유','빵'],run:function(){
+			console.log('I like running');
+		}
+	};
+	
+	console.log('이름' + person.name);
+	console.log('나이 :' + person.age);
+	console.log('생일' + person.birthday);
+	console.log('친구이름' + person.friend.name);
+	console.log('친구 나이 : ' + person.friend.age);
+	for(let i=0; i<person.bag.length;i++){
+		console.log('가방속 : ' + person.bag[i]);
+	}
+	person.run();
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

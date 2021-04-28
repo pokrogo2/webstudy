@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		/*
+			선언적 함수
+			함수 이름있음
+			함수정의 : 만드는것
+				function 함수명 (매개변수){
+					함수본문
+					return 값;
+			}
+			함수호출 : 함수 사용
+				함수명(인수);
+			동일한 함수를 여러번 만들어 덮어쓰기 가능
+			함수를 변수에 저장할수 있다.
+			함수정의와 호출의 순서 상관 x
+				#호이스팅 (hoisting)
+					:변수선언,선언적 함수 정의를 코드 맨 첫부분으로 옮겨서 처리하는것
+		
+		
+		*/
+		a=10;
+		var a;
+		
+		console.log(a);
+		
+		
+		function whoAmI(name,age){
+			console.log('이름 : ' + name + ',나이 : ' + age +'살');
+		}
+		
+		whoAmI('뽀로로',18);
+		
+		//호이스팅
+		
+		whoAreYou('루피',16);
+		function whoAreYou(name,age){
+			console.log('이름 : ' + name + ',나이 : ' + age +'살');
+		}
+		
+		//함수를 변수에 저장
+		var f = function whereAreYou(address){
+			console.log('나는' + address+'에 산다');
+		}
+		
+		f('부산');
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            .container{
+                box-sizing: border-box;
+                width: 528px;
+                height: 600px;
+                margin: 0 auto;
+                background-color:aliceblue;
+                z-index: 1;
+                padding-top: 100px;
+            }
+            header{
+                width: 122px;
+                height: 118px;
+                z-index: 2;
+                background-image: url(./examimg.PNG);
+                background-size: cover;
+                margin: 0 auto;
+                margin-bottom: 60px;
+            }
+            .box1{
+                box-sizing: border-box;
+                margin: 0 auto;
+                width: 360px;
+                height: 40px;
+                
+                margin-bottom: 10px;
+                border: 1px solid lightgray;
+                border-radius: 4px;
+                background-color: #fff;
+                padding-left: 20px;
+            }
+            #input_box{
+                width: 80%;
+                height: 95%;
+                outline: none;
+                border:none;
+            }
+            .btn{
+                box-sizing: border-box;
+                margin: 0 auto;
+                width: 360px;
+                height: 40px;
+                border: 1px solid lightgray;
+                background-color: blue;
+                border-radius: 4px;
+                padding-top: 8px;
+            }
+
+            .btn>a{
+                width: 360px;
+                height: 40px;
+                margin: 0 auto;
+                color: #fff;
+                font-style: none;
+                margin-left: 150px;
+                text-decoration: none;
+                
+                
+            }
+            .box2{
+                box-sizing: border-box;
+                margin: 0 auto;
+                width: 360px;
+                height: 40px;
+                margin-top: 10px;
+            }
+            .env{
+                color: gray;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        
+            <header></header>
+            <div class="login_main">
+                <div class="box1">
+                    <input type="text" id="input_box" placeholder="계정">
+                 </div>
+                <div class="box1">
+                    <input type="text" id="input_box" placeholder="비밀번호">
+                 </div>
+                <div class="btn">
+
+                    <a href="board.html">로그인</a>
+                </div>
+                <div class="box2">
+                    <input type="checkbox" class="check" id="log">
+                    <label for="log">자동 로그인</label>
+                    <input type="checkbox" class="check" id="pw">
+                    <label for="pw">비밀번호 저장</label>
+                    <p class="env"><i class="fas fa-asterisk"></i> 환경설정</p>
+                </div>
+                
+                
+            </div>
+        
+        </div>
+    </body>
+</html>

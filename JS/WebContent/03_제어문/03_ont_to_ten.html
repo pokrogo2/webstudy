@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 </head>
 <body>
-	<div id ="one-to-ten"></div>
-		<script>
-			var n =1;
-			var result='';
-			while(n<=10){
-				result += n+'<br>';
-			
-				n++;
-			}
-			document.getElementById('one-to-ten').innerHTML = result;
-		</script>
-		
-		<div id="list1">
-		<script>
-			var ul = document.createElement('ul');
-			document.getElementById('list1').appendChild(ul);
-			var n=1;
-			while(n<=5){
-				var li = document.createElement('li');
-				li.textContent=n;
-				ul.appendChild(li);
-				n++;
-			}
-		</script>
-			<ul>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				
-				
-			</ul>
-			
-			<div id="select1"">
-				<select name="mm">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-				</select>
-			
-			</div>
-		
-		</div>
-		
+	<div id="one-to-ten"></div>
+	<script>
+		/*
+		var n = 1;
+		var result = '';
+		while (n <= 10) {
+			result += n + '<br>';
+			n++;
+		}
+		document.getElementById('one-to-ten').innerHTML = result;
+		*/
+		var n = 1;
+		while (n <= 10) {
+			document.getElementById('one-to-ten').innerHTML += n + '<br>';
+			n++;
+		}
+	</script>
+	<div id="list1"></div>
+	<script>
+		/*
+		var ul = document.createElement('ul');
+		document.getElementById('list1').appendChild(ul);
+		var n = 1;
+		while (n <= 5) {
+			var li = document.createElement('li');
+			li.textContent = n;
+			ul.appendChild(li);
+			n++;
+		}
+		*/
+		var result = '<ul>';
+		var n = 1;
+		while (n <= 5) {
+			result += '<li>' + n;  // + '</li>';
+			n++;
+		}
+		// result += '</ul>';
+		document.getElementById('list1').innerHTML = result;
+	</script>
+	<div id="select-box">
+	</div>
+	<script>
+		/*
+		var select = document.createElement('select');  // <select></select>
+		select.setAttribute('name', 'mm');  // <select name="mm"></select>
+		var m = 1;
+		while (m <= 12) {
+			var option = document.createElement('option');  // <option></option>
+			option.setAttribute('value', m);  // <option value="m"></option>
+			option.textContent = m + '월';  // <option value="m">m월</option>
+			select.appendChild(option);
+			m++;
+		}
+		document.getElementById('select-box').appendChild(select);
+		*/
+		var result = '<select name="mm">';
+		var m = 1;
+		while (m <= 12) {
+			result += '<option value="' + m + '">' + m + '월';
+			m++;
+		}
+		document.getElementById('select-box').innerHTML = result;
+	</script>
+			<div id="t1"></div>
+  
+	   <script>
+	     var table = document.createElement('table');
+	     var tbody = document.createElement('tbody');
+	    table.appendChild(tbody);
+	    var i=1;
+	   	var c=1;
+	    while(i<=5){
+	     var tr = document.createElement('tr');
+	    tbody.appendChild(tr);
+	     var n=1;
+	    while(n<=3){
+	       var td = document.createElement('td');
+	      tr.appendChild(td);
+	      td.textContent = c;
+	      n++;
+	      c++;
+	    }
+	    i++;
+	    }
+
+	    
+	   // document.getElementById('t1').innerHTML = t1;
+	</script>
 		
 		
 		
