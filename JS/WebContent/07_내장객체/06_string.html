@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		//길이구하기
+		var str = "javascript";
+		console.log(str.length);
+		//문자추출
+		console.log(str.charAt(0));
+		//문자열 추출
+		console.log(str.substring(4)); //인덱스 4부터끝까지추출
+		console.log(str.substring(0,4)); //추출범위 0123
+		console.log(str.substr(4)); //인덱스 4부터끝까지
+		console.log(str.substr(0,4))//인덱스0부터 4글자추출
+		
+		//찾기
+		console.log(str.indexOf('a')); //첫 a의 인덱스 반환
+		console.log(str.lastIndexOf('a'))//마지막
+		//대소문자
+		console.log(str.toUpperCase());
+		console.log(str.toLowerCase());
+		
+		//문자 변환
+		console.log(str.replace('java','ECMA'));//java를 EMCA로 수정
+		
+		//공백제거
+		var str2 = '   javascript   ';
+		console.log(str.trim());//javascript
+		//trimleft/trimright
+		
+		//문자열 분리
+		var str3 = 'hello java script';
+		var arr = str3.split(' ');
+		console.log(arr);
+		//분리된 문자열 이어붙이기
+		var arr2 = ['hello','java','script'];
+		var str4 =arr2.join(' '); //공백으로 이어붙히기 hello java script
+		var str4 =arr2.join(',');//hello,java,script
+	</script>
+	
+	
+	<script>
+		//replaceAll('javascript와 java는 다르다',java,ECMA);
+		//ECMAscript와 ECMA는 다르다.
+
+		
+		//console.log(st.replace('java','ECMA').replace('java','ECMA'));
+		
+		function replaceAll(st,before,after){
+			//st.indexOf(before)
+			var i = st.indexOf(before);
+			while(i!=-1){
+				st=st.replace(before,after);
+				i=st.indexOf(before,i);
+			}
+			return st;
+		}
+		console.log(replaceAll('javascript와 java는 다르다','java','ECMA'));
+	
+		function replaceAll(st,before,after){
+			return str.split(before).join(after);
+		}
+		console.log(replaceAll('javascript는 java와 다르다','java','ECMA'));
+		//자바로 쪼갬. 자바사라짐 ECMA로 이어붙힘
+	</script>
+</head>
+<body>
+
+</body>
+</html>

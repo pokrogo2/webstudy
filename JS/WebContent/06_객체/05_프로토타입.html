@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+
+/* 	프로토타입
+	같은타입의 모든 객체들이 공유하는 하나의 공간
+	공통변수,변수를 사용하지않는 함수를 프토로타입에 저장하면 공간절약
+	접근방식
+	객체타입.prototype.프로퍼티
+	객체타입.prototype.함수()
+	생성자함수 내부에서 접근
+	this.__proto__.프로퍼티
+*/ 
+		//생성자함수
+		function Product(name){
+	 this.name = name;
+	 this.company ='오뚜기';//모든객체가 개별적저장 = 낭비
+ }
+		Product.prototype.company = '오뚜기';
+		
+		//객체생성
+		var p1 = new Product('3분카레');
+		var p2 = new Product('미트볼');
+		
+		//확인
+		console.log('제조사 : ' + p1.company+',제품 :' +p1.name);
+		console.log('제조사 : ' + p2.company+',제품 :' +p2.name);
+ 
+</script>
+<script>
+	function Korean(name){
+		this.name=name;
+		this.__proto__.country = '대한민국';
+		this.__proto__.tourSlogan = function(){
+			console.log('Imagine your Korea');
+		}
+	}
+
+	//객체생성
+	var k1 = new Korean('박지성');
+	var k2 = new Korean('손흥민');
+	
+	for (var p in k1){
+		console.log(k1[p]);
+	}
+	for (var p in k2){
+		console.log(k2[p]);
+	}
+	
+	k1.tourSlogan();
+	k2.tourSlogan();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

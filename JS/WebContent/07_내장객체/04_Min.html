@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	console.log('파이' + Math.PI);
+	console.log('제곱' + Math.pow(2,3));
+	console.log('절대값 : ' +Math.abs(-3));
+	console.log('최대값 :' +Math.max(1,2,3,4,5));
+	console.log('최소값 :' +Math.min(1,2,3,4,5));
+	console.log('루트 : ' + Math.sqrt(25));
+	console.log('반올림' + Math.round(1.5));
+	console.log('내림' +Math.floor(1.5));
+	console.log('올림' + Math.ceil(1.5));
+	console.log('절사' + Math.trunc(1.5));
+	console.log('랜덤' + Math.random());
+	
+	
+</script>
+<script>
+	//반올림 올림 내림 절사 자릿수 지정이 가능하도록 함수구현
+	// 소수2자리 반올림 1.456
+	console.log(Math.round(1.456*100)/100);
+	
+	function myRound(n,digit){
+		digit || (digit=0);
+		return Math.round(n*Math.pow(10,digit))/Math.pow(10,digit);
+	}
+
+	console.log(myRound(456789.45678,3));
+	console.log(myRound(456789.45678,2));
+	console.log(myRound(456789.45678,1));
+	console.log(myRound(456789.45678,0));
+	console.log(myRound(456789.45678,-1));
+	console.log(myRound(456789.45678,-2));
+	console.log(myRound(456789.45678,-3));
+</script>
+</head>
+<body>
+
+</body>
+</html>

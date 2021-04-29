@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 
+		JSON
+		1.javaScript Object Notation
+		2.자바스크립트 객체 표현 방법
+		3.데이터를 주고받을때 사용하는 가장 핫한 자료형
+		JSON형식
+		{
+			속성 : 값,
+			속성 : 값
+		
+		}
+	
+	
+	*/
+	
+	//1.json 생성하기
+	var person={
+		"name" 	: "브레드",
+		"age" : 10,
+		"birthday" : "2021-04-15",
+		"friend" : {
+			"name" : "초코",
+			"age" : 5
+		}
+	
+	};
+	//json데이터를 문자열로 변환
+
+	var strPerson = JSON.stringify(person);
+	console.log(strPerson)
+	console.log(typeof strPerson);
+	
+	var p = JSON.parse(strPerson)
+	console.log(p.name);
+	console.log(p.age);
+	console.log(p.birthday);
+	console.log(p.friend.name);
+	console.log(p.friend.age);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+	/* 내부함수
+		function 내부에 포함된 function을 의미
+		function내부에서만 호출
+		내부함수를 외부로 반환할수있음
+	
+		삼각형넓이구하는 함수 
+		1.내부함수 : 너비랑 높이 곱한결과
+		2.외부함수 : 반환결과를 2로나눔
+		
+	*/
+	function getTriangleArea(width,height){
+			function multiplication(a,b){
+				a || (a=1);
+				b || (b=1);
+				return a*b;
+			}
+			return multiplication(width,height)/2;
+		}
+	/* a=multiplication(1,2); //외부에서 내부함수 호출 불가능
+	console.log(a); */
+	
+	area = getTriangleArea(3,5);
+	console.log(area);
+	
+	//원의 넓이 반환 하는 getCircleArea()구현
+	//내부함수 : pi의 제곱을 반환하는값
+	function getCircleArea(r){
+		function multiplePI(a){
+			a || (a=1);
+			return a*a;
+		}
+		return multiplePI(r)*3.14;
+	}
+	
+	circle = getCircleArea(3);
+	console.log(circle);
+	
+	function outer(){
+		function inner(){
+			console.log('이름 : 브레드, 나이 10살');
+			}
+		return inner; //함수반환
+	}
+	
+	
+	var f =outer();
+	f();//f에 inner함수가 저장되어 있어서 함수호출로처리
+	
+	outer()();
+	
+	//내부함수를 외부로반환할때는 내부함수의 변수값이 외부에서도 유지(스코프가이상)
+	//일반적인스코프
+	/* function f(){
+		var a = 10;
+	}
+	alert(a); // 불가능, 스코프가 다름
+	 */
+	
+	 //함수 내부의 변수를 외부에서 접근할수있도록 변수를 내부함수에 담아서 내부함수를 리턴
+	 
+	 function outer3(){
+		function inner3(){
+			var a = 10;
+			console.log(a);
+		}
+		return inner3;
+	}
+	outer3()();
+	//클로저
+	//내부함수를 반환 받는 영역에서 내부함수의 변수값을 접근할 수 있음을 의미한다.
+	function outer4(){
+		var a =10;
+		function inner4(){
+			console.log('inner4 a : ' + a);
+		}
+		return inner4;
+		
+	}
+	outer4()();
+	//console.log(a);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
