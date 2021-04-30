@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+//onload : html문서를 모두 읽은뒤에 실행
+	window.onload =function(){
+	document.getElementById('box').textContent='박스다';
+}
+var box = document.getElementById('box');
+/* window.addEventListener() =('load',function(){
+	
+}); *//* 
+
+box.onclick = function(){
+	this.textContent = '불렀어요?'; *///this ==box
+	//이벤트발생하면 객체로 생성
+/* 	box.onclick =function(event){
+	console.log(event);
+	event.target.textContent = '왜';
+	
+	} 
+}*/
+	//표준 이벤트모델
+	//this
+/* 	var box2 = document.getElementById('box2');
+	
+	box2.addEventListener('click',function(){
+		this.textContent='불렀나'});
+	
+	box2.addEventListener('click',function(event){
+		event.target.style.backgroundColor='yellow'}); */
+	
+	function f(box3){
+		box3.textContent = '클릭했습니다';
+	}
+</script>
+</head>
+<body>
+	<div id="box">클릭전</div><div id="box2">클릭전2</div>
+	<div id="box3" onclick="f(this)">클릭전 3</div>
+</body>
+</html>

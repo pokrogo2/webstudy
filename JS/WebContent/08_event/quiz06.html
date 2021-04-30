@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		ul{
+		list-style-type: none;
+		width:600px;
+		}
+		li{
+		background-color:gray;
+		border:1px solid black;
+		margin:2px;
+		padding:3px 3px 3px 10px;}
+	
+		li::before{
+			border:1px solid black;
+			content:'>';
+			width:20px;
+			height:20px;
+		}
+		.choice{
+		background-color:teal;}
+		.choice::before{
+		content: '';
+		border-width:0 3px 3px 0;
+		border-color:limegreen;
+		border-style:solid;
+		transform:rotate(45deg);
+		}
+	</style>
+<script>
+	onload = function(){
+		var ul= document.getElementById('list');
+		ul.addEventListener('click',function(event){
+				if(event.target.tagName=='LI'){
+					event.target.classList.toggle('choice');//<li class="choice"><-><li class>
+				}
+		})
+		
+	}
+</script>
+
+
+
+</head>
+<body>
+<h3>주말에 해야 할 일</h3>
+<ul id="list">
+	<li>마트장보기</li>
+	<li>어린이날 선물사기</li>
+	<li>수업하기</li>
+	<li>문제 만들기</li>
+	<li>놀기</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		#container {
+			margin: 0 auto;
+			width: 640px;
+			border: 1px solid black;
+		}
+		#image-box {
+			padding: 10px;
+			width: 100%;
+		}
+		#image {
+			width: 100%;
+			height: 420px;
+		}
+		#nav-box {
+			margin: 0 auto;
+			width: 120px;
+			display: flex;
+			justify-content: space-between;
+		}
+		#prev, #image-no, #next {
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+		}
+		#prev:active,#next:active{
+			color:orange;
+		}
+		#prev:hover,#next:hover{
+		
+		}
+	</style>
+	<script>
+		onload = function(){
+			
+			var images = ['cat.jpg', 'dog.jpg', 'eagle.jpg', 'frog.jpg', 'lion.jpg', 'hooray.jpg', 'hedgehog.jpg', 'vase.jpg'];
+			var image_idx = 0;
+			
+			var image_no = document.getElementById('image-no');
+			image_no.textContent = (image_idx + 1) + ' / ' + images.length;
+			var prev = document.getElementById('prev');
+			var next = document.getElementById('next');
+			prev.addEventListener('click',function(){changeImage(-1);})
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<!-- 이미지 -->
+		<div id="image-box">
+			<img src="../images/cat.jpg" id="image">
+		</div>
+		<!-- 번호 -->
+		<div id="nav-box">
+			<div id="prev"><i class="fas fa-backward"></i></div>
+			<div id="image-no"></div>
+			<div id="next"><i class="fas fa-forward"></i></div>
+		</div>
+	</div>
+</body>
+</html>

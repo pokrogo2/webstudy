@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//메세지보기버튼을 클릭하면 fa와 fb를 모두 순차적으로 동작하시오
+
+
+	function fa(){
+		alert('처음뵙겠습니다.');
+	}
+	function fb(){
+		alert('반갑습니다.')
+	}
+	onload = function(){
+	document.getElementById('message-btn').addEventListener('click',fa);
+	document.getElementById('message-btn').addEventListener('click',fb);//fa()안붙이는 이유 = 선언적함수
+	}
+	
+	//2.고전 이벤트fa,fb를하나로묶음
+	
+</script>
+</head>
+<body>
+	<input type="button" value="메세지보기" id="message-btn">
+</body>
+</html>
