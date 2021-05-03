@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 폼 내부 모든 요소들을 폼 액션 속성에 지정해둔 곳으로 보내는것 -->
+	<form id="form" name="f" action="index.html">
+		<input type ="text" id="query" name ="q" value="기본값">
+		
+		<br><br>
+		<button>검색</button> <!-- 버튼역할 = 서브밋 -->
+	</form>
+	
+	<script>
+		//1.<form id="form">
+		// document.getelementById("form")
+		//<form name="f">
+		// 1)document.forms.f
+		// 2)document.forms['f']
+		var form=document.getElementById('form');
+		var query=document.getElementById('query');
+		//name을 기반으로 알아내기
+		var form2=document.forms.f;
+		var q = form2.q;//var q= form2['q']
+		
+		//고전이벤트
+/* 		
+		form.onsubmit = function(){
+			
+		} */
+		//표준이벤트
+		form.addEventListener('submit',function(event){
+			//value속성값알아내기
+			//query.getAttribute('value')
+			//query.value
+			//alert(query.value);
+			console.log(event);
+			if(query.value==''){
+				alert('검색어를 입력하세요.');
+				query.focus();
+				event.preventDefault(); //submit동작을막는다
+				return false;
+			}
+		});
+	
+	</script>
+
+</body>
+</html>

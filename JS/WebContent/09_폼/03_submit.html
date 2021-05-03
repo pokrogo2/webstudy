@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="f" onsubmit="fn_search()">
+	<input type="text" name="q">
+	<button>검색</button>
+</form>
+<script>
+	function fn_search(){
+		var f = document.forms.f;
+		var q = f.q;
+		if(q.value=='');{
+			alert('검색어를 입력하세요');
+			q.focus();
+			return false; //preventDefault없이도 서브밋 막아짐.
+		}
+		return true;
+	}
+
+</script>
+</body>
+</html>

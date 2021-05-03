@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	onload=function(){
+		var btn = document.getElementById('reg-btn');
+		btn.addEventListener('click',function(){
+			var q = document.forms.f.q;
+			var content = q.value;
+			var regID = /^[a-z0-9][a-z0-9_-]{4,19}$/;
+			
+			/* if(content.match(regID)==null){
+				alert('사용불가능한 아이디');
+			}else{
+				alert('멋진 아이디입니다.');
+			}
+			if(content.search(regID)==-1){
+				alert('불가능한 아이디');
+			}else{
+				alert('멋진 아이디');
+			} */
+			//2.정규식에서 지원하는함수
+			//1.exec()
+				//정규식.exec(문자열)
+				//2.일치하는 문자열을 배열로 반환, 일치하지않으면 null반환
+			/* if(regId.exec(content)==null){
+				alert('사용불가능한 아이디');
+			}else{
+				alert('멋진 아이디입니다.');
+			} */
+			//test함수
+			//일치하는 문자열이 있으면 true 없으면 false
+			if(regID.test(content)){
+				alert('멋진아이디입니다.');
+			}else{
+				alert('사용할수 없는 아이디입니다.')
+			}
+		})
+		
+	}
+
+</script>
+</head>
+<body>
+
+<form name="f">
+<h1>정규식 검사하기</h1>
+	<input type="text" name="q">
+	<input type="button" value="검사" id="reg-btn"></form>
+</body>
+</html>
