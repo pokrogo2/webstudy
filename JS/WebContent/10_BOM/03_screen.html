@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		console.log('화면너비 : ' + screen.width);
+		console.log('화면높이 : ' + screen.height);
+	
+		console.log('실제너비 : ' +screen.availWidth);
+		console.log('실제높이 : ' +screen.availHeight);
+	
+		
+		var winWidth = 640;
+		var winHeigth=480;
+		var myLeft = (screen.availWidth-winWidth)/2;
+		var myTop =  (screen.availHeight-winHeight)/2;
+		open('','','width='+winWidth+',height =' +winHeight + ',top = ' +myTop+'left = '+myLeft)
+	</script>
+</body>
+</html>
