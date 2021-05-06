@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/* 
+		비동기통신을 위한 onreadystatechange
+		1. 통신의 각 진행단계를확인하는 이벤트 속성
+		2. 비동기 통신의 필수 이벤트
+		3.	readyState어ㅣ status
+		4. readyState
+			1)0 : XMLHttpRequest.UNSEND
+			2)1 : XMLHttpRequest.OPENED
+			3)2 : XMLHttpsRequest.HEADERS_RECEIVE
+			4)3 : XMLHttpsRequest.LOADING
+			5)4 : XMLHttpsRequest.DONE
+			
+		5.status
+			1)1xx : 요청하고 작업중인경우
+			2)2xx : 서버가 정상적으로 응답한경우(200)
+			3)3xx : 리다이렉트가 필요한경우
+			4)4xx : 요청이잘못된경우 404
+			5)5xx : 서버에 오류가 발생한 경우
+	*/
+	//XMLHttpRequest 객체생성
+	var request = new XMLHttpRequest();
+	//open
+	request.open('get','data.txt',true);//비동기
+	//send
+	request.send();
+	//지금부터 서버가 응답했는지 계속 체크할 수 있는 readystatechange 이벤트 처리
+	request.onreadystatechange=function(){
+		if(request.readyState==4&&request.status==200){
+			document.getElementById('receive').textContent = request.responseText;
+		}
+	}
+</script>
+</head>
+<body>
+
+ <h1> 서버가 보내준 데이터</h1>
+ <div id="receive">
+</body>
+</html>

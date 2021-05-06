@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+onload = function(){
+	var request = new XMLHttpRequest();
+	request.open('get','quiz04.xml',true);
+	request.send();
+	request.onreadystatechange=function(){
+		var resXML = request.responseXML;
+		var weather = resXML.getElementsByTagName('weather')[0];
+		document.getElementById('year').textContent=weather.getAttribute('year');
+		document.getElementById('month').textContent=weather.getAttribute('month');
+		document.getElementById('day').textContent=weather.getAttribute('day');
+		document.getElementById('hour').textContent=weather.getAttribute('hour');
+		
+
+		var locations = resXML.getElementsByTagName('location');
+		for(let i=0; i<locations.length;i++){
+			
+		}
+		
+	}
+}
+		</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+onload = function(){
+	var request = new XMLHttpRequest();
+	request.open('get','quiz03.xml',true);
+	request.send();
+	request.onreadystatechange=function(){
+		var resXML = request.responseXML;
+		var weather = resXML.getElementsByTagName('weather')[0];
+		document.getElementById('year').textContent=weather.getAttribute('year');
+		document.getElementById('month').textContent=weather.getAttribute('month');
+		document.getElementById('day').textContent=weather.getAttribute('day');
+		document.getElementById('hour').textContent=weather.getAttribute('hour');
+		
+
+		var locals = resXML.getElementsByTagName('local');
+		for(let i = 0; i<locals.length;i++){
+			var local = locals[i];
+			var tr = document.createElement('tr');
+			document.getElementById('receive').appendChild(tr);
+			var td = document.createElement('td');
+			td.textContent = i+1;
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			td.textContent = local.textContent;
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			td.textContent = local.getAttribute('ta');
+			tr.appendChild(td);
+			var td = document.createElement('td');
+			td.textContent = local.getAttribute('desc');
+			tr.appendChild(td);
+		}
+	}
+}
+
+
+</script>
+</head>
+<body>
+<h1><span id="year">연</span>&nbsp;
+	<span id="month">월</span>&nbsp;
+	<span id="day">일</span>&nbsp;
+	<span id="hour">시</span>
+
+
+</h1>
+<table border="1">
+	<thead>
+		<tr>
+			<td>순번</td>
+			<td>지역</td>
+			<td>온도</td>
+			<td>날씨</td>
+			
+		
+		</tr>
+	
+		
+	</thead>
+
+	<tbody id ="receive"></tbody>
+</table>
+</body>
+</html>
