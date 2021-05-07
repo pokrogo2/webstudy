@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		$(function(){
+			// 1.textcontent ==text()
+			// 		객체.textContent
+					// 객체.text()
+					// 객체.textContent='텍스트'
+					// 객체.text('텍스트')
+				//2.innerHTML ==html()	
+				// 1)a.innerHTML
+				// 	a.html()
+				// 3)a.innerHTML = '<b>텍스트<b>'
+				//	a.html('<b>텍스트</b>')
+			//3.style ==css()
+			// 1) 객체.style.color
+			//		객체.css('color')
+			//	2)객체.stlye.color='red'
+			//		객체.css('color','red')
+			//	3)객체.style.color='red'
+			//	    객체.style.backgroundColor='red'
+			//		객체.css('color','red').css('b-c','red')
+			//		객체.css({'color','red','b-c','red'})
+		
+
+		$('#friday').text('금요일에 야식');
+		
+		$('#saturday').html('<strong>토요일엔 놀러가자</strong>');
+		$('#sunday').css('color','red');
+		})
+		
+	</script>
+</head>
+
+<body>
+	<div>
+		<ul>
+			<li class="menu"><a>카페</a></li>
+			<li class="menu"><a>메일</a></li>
+			<li class="menu"><a>뉴스</a></li>
+			<li class="menu"><a>지도</a></li>
+		
+		
+		</ul>
+	
+	
+	</div>
+	<div>
+	
+		<p id="friday">금요일</p>
+		<p id="saturday">토요일</p>
+		<p id="sunday">일요일</p>
+	
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- 1.cdn으로 제이쿼리 라이브러리 -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!-- 2.다운받은jquery라이브러리 사용 -->
+	<script src="../js/jquery-3.6.0.js"></script>
+	<script>
+		
+		/* 
+			제이쿼리선택자
+			
+			1.css선택자 그대로 사용
+			2.재이쿼리wrapper를 이용
+			3.대표
+				1)태그선택자 $('div')
+				2)아이디선택자$('#id')
+				3)클래스선택자$('.class')
+				
+			페이지 로드 이벤트
+			1.$(document).ready(function(){})
+			2.$(function(){})
+		
+		
+		
+		
+		*/
+		$(document).ready(function(){
+			alert(document.getElementById('hello').textContent);
+		})
+	</script>
+</head>
+<body>
+	<h1 id="hello">hello</h1>
+</body>
+</html>

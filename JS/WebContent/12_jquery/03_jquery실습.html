@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+	$(document).ready(function(){
+		const css = $('#css');
+		const ul = $('ul');
+		console.log($(css).parent());
+		console.log($(css).prev());
+		console.log($(css).next());
+		console.log($(css).siblings());
+		console.log($(ul).children());
+		
+		
+		//실습
+		$(css).parent().css('list-stlye-type','none');
+		$(ul).children().css('color','red');
+		$(css).prev().css('background-color','yellow');
+	})
+
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>html</li>
+			<li id="css">css</li>
+			<li>js</li>
+			<li>jq</li>
+		
+		
+		</ul>
+	
+	
+	
+	
+	</div>
+
+</body>
+</html>
